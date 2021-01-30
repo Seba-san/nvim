@@ -25,3 +25,20 @@ Luego entrar a algun archivo de texto con nvim, poner:
 esperar a que se instale todo, salir poniendo :q. 
 
 Volver a entrar y probar la tecla de acceso rapido " q". Si sale de la pantalla, todo anda bien (ademas de que tiene que cambiar los colores y eso.)
+
+### Instalacion del editor de xml
+fuente: https://github.com/othree/xml.vim
+En la carpeta ~/.vim/ pegar la carpeta ftplugin de este repositorio. (estaria bueno hacer un .sh para instalarlo directamente no?)
+En esta carpeta se ponen las extenciones de los archivos .vim.  Entonces mantenes el .vimrc mas limpio y si queres editar el comportamiento para un determinado tipo de archivo, te  vas al py.vim o xml.vim o cosas asi. Mas info en: https://vim.fandom.com/wiki/File_type_plugins
+
+Instrucciones para editar achivos XML:
+	This script provides some convenience when editing XML (and some SGML including HTML) formated documents. It allows you to jump to the beginning or end of the tag block your cursor is in. % will jump between < and > within the tag your cursor is in. When in insert mode and you finish a tag (pressing >) the tag will be completed. If you press > twice it will complete the tag and place the cursor in the middle of the tags on it's own line.
+
+	Fuente: https://github.com/sukima/xmledit/
+
+Para ver mas instrucciones teclear: :help xml-plugin
+Con el comando ",f" se foldean las lineas.
+Se cambió el comando para comentar, es ",r".
+Para seleccionar toda la seccion escribir "vat"
+Para comentar toda la seccion (modo normal), poner ",="
+Para descomentar, hay que ir hasta el cierre del comentario y precionar ",]"... pero parece que no lo deja como antes... 

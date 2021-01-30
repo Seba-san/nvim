@@ -53,6 +53,7 @@ set bg=dark
 let g:gruvbox_contrast_dark = "hard"
 let NERDTreeQuitOnOpen=1
 let mapleader = " "
+let maplocalleader = ","
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>nt :NERDTreeFind<CR>
 nmap <Leader>w :w<CR>
