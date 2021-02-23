@@ -1,6 +1,17 @@
 # nvim
 configuracion, tutoriales y demas
 
+Instalacion:
+fuente: https://github.com/neovim/neovim/wiki/Installing-Neovim
+hacer:
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+./nvim.appimage --appimage-extract
+./squashfs-root/AppRun --version
+
+luego copiar la carpeta "squashfs-root" en algun lugar del home (o donde quieras) y hacer un simbolic link a:
+ln -s {path-to-folder}/squashfs-root/AppRun /usr/bin/nvim
+
 Explicacion de Nico: https://www.udemy.com/course/vim-aumenta-tu-velocidad-de-desarrollo/learn/lecture/15610326#overview
 Para usar el mismo archivo de configuracion de vim en nvim, poner en ~/home/.config/nvim/init.vim esto:
 
