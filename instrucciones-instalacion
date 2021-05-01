@@ -53,3 +53,5 @@ Se cambió el comando para comentar, es ",r".
 Para seleccionar toda la seccion escribir "vat"
 Para comentar toda la seccion (modo normal), poner ",="
 Para descomentar, hay que ir hasta el cierre del comentario y precionar ",]"... pero parece que no lo deja como antes... 
+
+Ojo con los Virtualenv: No son compatibles con vim. Hay que usar el venv generico de python, fuente: https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment
