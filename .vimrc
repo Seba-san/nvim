@@ -14,6 +14,9 @@ au BufNewFile,BufRead *.js, *.html, *.css set tabstop=2
 au BufNewFile,BufRead *.js, *.html, *.css set softtabstop=2
 au BufNewFile,BufRead *.js, *.html, *.css set shiftwidth=2
 
+" Para ver los tabs y espacios
+set list
+set listchars=tab:>-
 
 " configuracion de nico schurmann de holamundo
 set number " Es para que muestre los numeros de linea
@@ -42,6 +45,10 @@ Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
 " Para ver las lineas de espacios en python
 "Plug 'Yggdroot/indentLine'
+" C++
+"Plug 'bfrg/vim-cpp-modern' " para c++
+"Plug 'cjuniet/clang-format.vim'
+Plug 'rhysd/vim-clang-format' 
 call plug#end()
 
 " Configuracion para jedi (python)
@@ -54,7 +61,18 @@ let g:gruvbox_contrast_dark = "hard"
 let NERDTreeQuitOnOpen=1
 let mapleader = " "
 let maplocalleader = ","
+let g:jedi#environment_path = "auto" " Para no tener problemas con virtualenv
+
+let g:clang_format#style_options = {
+            \ "UseTab":"Never",
+	    \"BasedOnStyle": "LLVM",
+	    \"BreakBeforeBraces": "Custom",
+	    \"IndentWidth": 4,
+	    \"BraceWrapping":{"AfterCaseLabel":"false","BeforeElse":"true"}}
+
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>nt :NERDTreeFind<CR>
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
+nmap <C-k> :ClangFormat<CR>
+nnoremap <C-n> :NERDTree<CR>
