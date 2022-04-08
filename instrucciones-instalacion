@@ -2,7 +2,6 @@
 instalar vim:
 sudo apt-get install vim
 
-
 # nvim
 configuracion, tutoriales y demas
 
@@ -18,14 +17,17 @@ luego copiar la carpeta "squashfs-root" en algun lugar del home (o donde quieras
 ln -s {path-to-folder}/squashfs-root/AppRun /usr/bin/nvim
 
 Explicacion de Nico: https://www.udemy.com/course/vim-aumenta-tu-velocidad-de-desarrollo/learn/lecture/15610326#overview
-Para usar el mismo archivo de configuracion de vim en nvim, poner en ~/home/.config/nvim/init.vim esto:
+Para usar el mismo archivo de configuracion de vim en nvim, crear una carpeta dentro de .config y poner un archivo dentro de ella:
+mkdir ~/.config/nvim
+touch  ~/.config/nvim/init.vim
+pegar lo siguiente dentro de init.vim:
 
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath=&runtimepath
 source ~/.vimrc
 
 descargar el archivo .vimrc de este repo y ponerlo en una carpeta dentro de config:
-mkdir ~/.config/nvim
+
 cd  ~/.config/nvim
 wget https://raw.githubusercontent.com/Seba-san/nvim/main/.vimrc
 
@@ -38,10 +40,15 @@ Luego instalar un manejador de plugins. En este caso se usara "plug vim":
 https://github.com/junegunn/vim-plug 
 
 Instrucciones de instalacion:
+Para vim:
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+Para neovim:
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+       
 
-Luego entrar a algun archivo de texto con nvim, poner:
+Luego entrar a algun archivo de texto con vim, poner:
 :Plug (apretar tab) y debe aparecer una lista para seleccionar opciones. Poner "Plugininstall"
 esperar a que se instale todo, salir poniendo :q. 
 
