@@ -1,6 +1,17 @@
 #vim
-instalar vim:
-sudo apt-get install vim
+instalar la ultima version de vim:
+(Fuente: https://www.vim.org/git.php)
+.- Instala GCC y otras cosas:
+sudo apt install build-essential
+.- Instalar los manuales 
+sudo apt-get install manpages-dev
+
+git clone https://github.com/vim/vim.git
+cd vim/src
+./configure --with-features=huge --enable-python3interp
+make
+sudo make install
+
 
 # nvim
 configuracion, tutoriales y demas
@@ -53,6 +64,11 @@ Luego entrar a algun archivo de texto con vim, poner:
 esperar a que se instale todo, salir poniendo :q. 
 
 Volver a entrar y probar la tecla de acceso rapido " q". Si sale de la pantalla, todo anda bien (ademas de que tiene que cambiar los colores y eso.)
+
+### Posibles errores con python
+
+solucion:
+pip install neovim
 
 ### Instalacion del editor de xml
 fuente: https://github.com/othree/xml.vim
