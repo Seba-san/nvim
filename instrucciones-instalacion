@@ -1,5 +1,9 @@
 #vim
-instalar la ultima version de vim:
+instalar la ultima version de vim (checkeado):
+sudo apt install vim-gtk
+
+Optativo (no funciono):
+
 (Fuente: https://www.vim.org/git.php)
 .- Instala GCC y otras cosas:
 sudo apt install build-essential
@@ -8,7 +12,7 @@ sudo apt-get install manpages-dev
 
 git clone https://github.com/vim/vim.git
 cd vim/src
-./configure --with-features=huge --enable-python3interp
+./configure --enable-python3interp
 make
 sudo make install
 
