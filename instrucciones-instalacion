@@ -1,3 +1,8 @@
+#vim
+instalar vim:
+sudo apt-get install vim
+
+
 # nvim
 configuracion, tutoriales y demas
 
@@ -19,9 +24,14 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath=&runtimepath
 source ~/.vimrc
 
-poner el archivo de configuracion .vimrc en ~/.config/.vimrc y crear un enlace simbólico en el home:
-ln -s ~/.config/.vimrc ~/
+descargar el archivo .vimrc de este repo y ponerlo en una carpeta dentro de config:
+mkdir ~/.config/nvim
+cd  ~/.config/nvim
+wget https://raw.githubusercontent.com/Seba-san/nvim/main/.vimrc
 
+luego crear 2 enlaces simbolicos:
+ln -s ~/.config/nvim/.vimrc ~/
+ln -s ~/.config/nvim/.vimrc ~/.config/.vimrc
 
 Luego instalar un manejador de plugins. En este caso se usara "plug vim":
 
